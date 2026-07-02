@@ -1,4 +1,4 @@
-export const CONTACT_EMAIL = 'hello@snabell.com';
+export const CONTACT_EMAIL = 'support@snabell.com';
 export const CONTACT_EMAIL_LINK = `mailto:${CONTACT_EMAIL}`;
 
 export type PackageId = 'starter' | 'growth' | 'pro';
@@ -179,6 +179,6 @@ export const FAQS = [
   {
     question: 'How do I get in touch after purchasing?',
     answer:
-      'We\'ll email you within a few hours of checkout to kick off your project, and you can reach us anytime at hello@snabell.com.',
+      'We\'ll email you within a few hours of checkout to kick off your project, and you can reach us anytime at support@snabell.com.',
   },
 ];
