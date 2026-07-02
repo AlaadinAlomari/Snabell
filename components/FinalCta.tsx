@@ -27,7 +27,7 @@ export default function FinalCta() {
 
         <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <a
-            href="#pricing"
+            href="/#pricing"
             className="inline-flex w-full items-center justify-center rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-primary-lt sm:w-auto"
           >
             See Pricing

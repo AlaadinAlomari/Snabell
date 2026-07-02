@@ -12,10 +12,10 @@ export default function Footer() {
           <a href={CONTACT_EMAIL_LINK} className="text-ink-soft transition-colors hover:text-primary">
             Email Support
           </a>
-          <a href="#pricing" className="text-ink-soft transition-colors hover:text-primary">
+          <a href="/#pricing" className="text-ink-soft transition-colors hover:text-primary">
             Pricing
           </a>
-          <a href="#faq" className="text-ink-soft transition-colors hover:text-primary">
+          <a href="/#faq" className="text-ink-soft transition-colors hover:text-primary">
             FAQ
           </a>
           <a href="/privacy" className="text-ink-soft transition-colors hover:text-primary">

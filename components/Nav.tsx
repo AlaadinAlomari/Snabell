@@ -4,9 +4,9 @@ import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
 const LINKS = [
-  { label: 'Features', href: '#features' },
-  { label: 'Pricing', href: '#pricing' },
-  { label: 'FAQ', href: '#faq' },
+  { label: 'Features', href: '/#features' },
+  { label: 'Pricing', href: '/#pricing' },
+  { label: 'FAQ', href: '/#faq' },
 ];
 
 export default function Nav() {
@@ -15,7 +15,7 @@ export default function Nav() {
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-bg/80 backdrop-blur">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-[5vw] py-4">
-        <a href="#" className="font-display text-xl font-bold tracking-tight text-ink">
+        <a href="/" className="font-display text-xl font-bold tracking-tight text-ink">
           Snabell
         </a>
 
@@ -33,7 +33,7 @@ export default function Nav() {
 
         <div className="hidden items-center gap-4 md:flex">
           <a
-            href="#pricing"
+            href="/#pricing"
             className="rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-primary-lt"
           >
             Get Started
@@ -64,7 +64,7 @@ export default function Nav() {
               </a>
             ))}
             <a
-              href="#pricing"
+              href="/#pricing"
               onClick={() => setOpen(false)}
               className="rounded-full bg-primary px-5 py-2.5 text-center text-sm font-semibold text-white"
             >
