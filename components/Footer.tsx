@@ -1,3 +1,5 @@
+import { CONTACT_EMAIL_LINK } from '@/lib/constants';
+
 export default function Footer() {
   return (
     <footer className="border-t border-line bg-bg-soft px-[5vw] py-10 sm:py-12">
@@ -7,13 +9,8 @@ export default function Footer() {
           © 2026 Snabell LLC · snabell.com
         </p>
         <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs sm:justify-end">
-          <a
-            href="https://wa.me/447442967254"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-ink-soft transition-colors hover:text-primary"
-          >
-            WhatsApp Support
+          <a href={CONTACT_EMAIL_LINK} className="text-ink-soft transition-colors hover:text-primary">
+            Email Support
           </a>
           <a href="#pricing" className="text-ink-soft transition-colors hover:text-primary">
             Pricing

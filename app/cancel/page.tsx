@@ -1,5 +1,5 @@
-import { XCircle, MessageCircle } from 'lucide-react';
-import { WHATSAPP_LINK } from '@/lib/constants';
+import { XCircle, Mail } from 'lucide-react';
+import { CONTACT_EMAIL_LINK } from '@/lib/constants';
 
 export default function CancelPage() {
   return (
@@ -12,8 +12,8 @@ export default function CancelPage() {
           Checkout cancelled — no charge was made.
         </h1>
         <p className="mt-4 text-base leading-relaxed text-ink-soft">
-          You can pick a package again whenever you&apos;re ready, or reach out on WhatsApp if you
-          have questions first.
+          You can pick a package again whenever you&apos;re ready, or email us if you have
+          questions first.
         </p>
         <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <a
@@ -23,13 +23,11 @@ export default function CancelPage() {
             Back to Pricing
           </a>
           <a
-            href={WHATSAPP_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={CONTACT_EMAIL_LINK}
             className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-line bg-bg px-7 py-3.5 text-sm font-semibold text-ink transition-colors hover:border-primary hover:text-primary sm:w-auto"
           >
-            <MessageCircle size={16} />
-            Chat on WhatsApp
+            <Mail size={16} />
+            Email Us
           </a>
         </div>
       </div>

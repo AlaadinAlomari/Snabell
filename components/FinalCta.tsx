@@ -1,10 +1,18 @@
 'use client';
 
-import { MessageCircle } from 'lucide-react';
-import { WHATSAPP_LINK } from '@/lib/constants';
+import { useState } from 'react';
+import { startCheckout } from '@/lib/checkout';
 import BlobDecoration from './BlobDecoration';
 
 export default function FinalCta() {
+  const [loading, setLoading] = useState(false);
+
+  async function handleBuyNow() {
+    setLoading(true);
+    const redirected = await startCheckout('growth');
+    if (!redirected) setLoading(false);
+  }
+
   return (
     <section className="relative overflow-hidden px-[5vw] py-20 sm:py-28">
       <BlobDecoration color="primary" className="left-1/2 top-0 h-64 w-64 -translate-x-1/2" />
@@ -24,15 +32,14 @@ export default function FinalCta() {
           >
             See Pricing
           </a>
-          <a
-            href={WHATSAPP_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-line bg-bg px-7 py-3.5 text-sm font-semibold text-ink transition-colors hover:border-primary hover:text-primary sm:w-auto"
+          <button
+            type="button"
+            disabled={loading}
+            onClick={handleBuyNow}
+            className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-line bg-bg px-7 py-3.5 text-sm font-semibold text-ink transition-colors hover:border-primary hover:text-primary disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
           >
-            <MessageCircle size={16} />
-            Chat on WhatsApp
-          </a>
+            {loading ? 'Redirecting...' : 'Get Growth — $297'}
+          </button>
         </div>
       </div>
     </section>

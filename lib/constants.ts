@@ -1,6 +1,5 @@
-export const WHATSAPP_NUMBER = '447442967254';
-export const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=Hi%2C%20I%27d%20like%20to%20ask%20about%20Snabell%20landing%20pages.`;
-export const WHATSAPP_LINK_PLAIN = `https://wa.me/${WHATSAPP_NUMBER}`;
+export const CONTACT_EMAIL = 'hello@snabell.com';
+export const CONTACT_EMAIL_LINK = `mailto:${CONTACT_EMAIL}`;
 
 export type PackageId = 'starter' | 'growth' | 'pro';
 
@@ -63,7 +62,7 @@ export const PACKAGES: Package[] = [
       '3 rounds of revisions',
       'Speed optimisation (95+ PageSpeed)',
       '60-day support window',
-      'Direct WhatsApp priority line',
+      'Direct priority email support',
     ],
     ctaLabel: 'Get Pro',
   },
@@ -111,7 +110,7 @@ export const HOW_IT_WORKS = [
   {
     step: 2,
     title: 'Tell Us About Your Business',
-    description: 'Share your goals, brand, and content over WhatsApp.',
+    description: 'Share your goals, brand, and content over email.',
   },
   {
     step: 3,
@@ -142,7 +141,7 @@ export const TESTIMONIALS = [
     name: 'Sara Lindqvist',
     role: 'Founder, Solace Studio',
     quote:
-      'The WhatsApp-only workflow sounded strange at first, but it made communication faster than email ever was.',
+      'The checkout was seamless and their team was in my inbox within hours to kick things off.',
   },
 ];
 
@@ -150,12 +149,12 @@ export const FAQS = [
   {
     question: 'How fast will my landing page actually be delivered?',
     answer:
-      'Starter and Pro packages are delivered in 5 business days, and Growth in 7 business days, starting once you provide your content and business details over WhatsApp.',
+      'Starter and Pro packages are delivered in 5 business days, and Growth in 7 business days, starting once you provide your content and business details over email.',
   },
   {
     question: 'What do I need to provide to get started?',
     answer:
-      'After checkout, we\'ll message you on WhatsApp to gather your business details, brand assets, and any content you want included. The faster you respond, the faster we build.',
+      'After checkout, we\'ll email you to gather your business details, brand assets, and any content you want included. The faster you respond, the faster we build.',
   },
   {
     question: 'Do you offer revisions?',
@@ -170,7 +169,7 @@ export const FAQS = [
   {
     question: 'Can I upgrade my package later?',
     answer:
-      'Yes — message us on WhatsApp and we\'ll work out the difference in price to move you up a tier.',
+      'Yes — email us and we\'ll work out the difference in price to move you up a tier.',
   },
   {
     question: 'Do you offer refunds?',
@@ -178,8 +177,8 @@ export const FAQS = [
       'If we fail to deliver within the agreed timeline (excluding delays caused by late client input), you\'re entitled to a full refund. See our Terms for details.',
   },
   {
-    question: 'Why WhatsApp instead of email?',
+    question: 'How do I get in touch after purchasing?',
     answer:
-      'It\'s faster for both sides — no waiting on email threads. All project communication happens directly with our team on WhatsApp.',
+      'We\'ll email you within a few hours of checkout to kick off your project, and you can reach us anytime at hello@snabell.com.',
   },
 ];

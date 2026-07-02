@@ -1,5 +1,5 @@
-import { CheckCircle2, MessageCircle } from 'lucide-react';
-import { WHATSAPP_LINK } from '@/lib/constants';
+import { CheckCircle2, Mail } from 'lucide-react';
+import { CONTACT_EMAIL, CONTACT_EMAIL_LINK } from '@/lib/constants';
 
 export default function SuccessPage() {
   return (
@@ -12,16 +12,14 @@ export default function SuccessPage() {
           Payment received — thank you!
         </h1>
         <p className="mt-4 text-base leading-relaxed text-ink-soft">
-          We&apos;ll message you on WhatsApp within a few hours to kick off your project.
+          We&apos;ll email you at {CONTACT_EMAIL} within a few hours to kick off your project.
         </p>
         <a
-          href={WHATSAPP_LINK}
-          target="_blank"
-          rel="noopener noreferrer"
+          href={CONTACT_EMAIL_LINK}
           className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-primary-lt"
         >
-          <MessageCircle size={16} />
-          Message Us on WhatsApp
+          <Mail size={16} />
+          Email Us
         </a>
       </div>
     </main>

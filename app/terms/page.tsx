@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
+import { CONTACT_EMAIL } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title: 'Terms of Service — Snabell',
@@ -49,7 +50,7 @@ export default function TermsPage() {
               <p className="mt-3">
                 Delivery timelines vary by package: 5 business days for Starter, 7 business days
                 for Growth, and 5 business days for Pro. The timeline begins once you provide the
-                required content and information via WhatsApp, within 48 hours of purchase.
+                required content and information via email, within 48 hours of purchase.
               </p>
             </section>
 
@@ -69,8 +70,8 @@ export default function TermsPage() {
                 5. Client Responsibilities
               </h2>
               <p className="mt-3">
-                To keep your project on schedule, you agree to respond to WhatsApp messages and
-                provide requested content within 48 hours.
+                To keep your project on schedule, you agree to respond to emails and provide
+                requested content within 48 hours.
               </p>
             </section>
 
@@ -118,7 +119,7 @@ export default function TermsPage() {
                 10. Contact
               </h2>
               <p className="mt-3">
-                For any questions about these Terms, contact us via WhatsApp at +44 7442 967254.
+                For any questions about these Terms, contact us at {CONTACT_EMAIL}.
               </p>
             </section>
           </div>

@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import { WHATSAPP_LINK } from '@/lib/constants';
 
 const LINKS = [
   { label: 'Features', href: '#features' },
@@ -34,14 +33,6 @@ export default function Nav() {
 
         <div className="hidden items-center gap-4 md:flex">
           <a
-            href={WHATSAPP_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm font-medium text-ink-soft transition-colors hover:text-primary"
-          >
-            WhatsApp
-          </a>
-          <a
             href="#pricing"
             className="rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-primary-lt"
           >
@@ -72,14 +63,6 @@ export default function Nav() {
                 {link.label}
               </a>
             ))}
-            <a
-              href={WHATSAPP_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm font-medium text-ink-soft"
-            >
-              WhatsApp
-            </a>
             <a
               href="#pricing"
               onClick={() => setOpen(false)}

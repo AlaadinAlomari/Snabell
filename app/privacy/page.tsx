@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
+import { CONTACT_EMAIL } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title: 'Privacy Policy — Snabell',
@@ -17,7 +18,7 @@ export default function PrivacyPage() {
             Privacy Policy
           </h1>
           <p className="mt-4 text-sm text-ink-soft">
-            Snabell LLC (snabell.com) · Contact: WhatsApp +44 7442 967254
+            Snabell LLC (snabell.com) · Contact: {CONTACT_EMAIL}
           </p>
 
           <div className="mt-12 flex flex-col gap-10 text-sm leading-relaxed text-ink-soft">
@@ -27,7 +28,7 @@ export default function PrivacyPage() {
               </h2>
               <p className="mt-3">
                 We collect your name and business details when you share them with us via
-                WhatsApp. Payment data is processed directly by Stripe — Snabell does not store
+                email. Payment data is processed directly by Stripe — Snabell does not store
                 your card details. We also collect analytics data through Google Analytics when
                 you visit our site.
               </p>
@@ -40,7 +41,7 @@ export default function PrivacyPage() {
               <p className="mt-3">
                 We use the information you provide to scope and deliver your landing page
                 project, to process payment for your chosen package, and to communicate project
-                updates with you via WhatsApp.
+                updates with you via email.
               </p>
             </section>
 
@@ -50,8 +51,8 @@ export default function PrivacyPage() {
               </h2>
               <p className="mt-3">
                 We share data with the following third parties strictly to operate our service:
-                Stripe for payment processing, Google Analytics for site analytics, and
-                Meta/WhatsApp for messaging. We do not sell your data to anyone.
+                Stripe for payment processing and Google Analytics for site analytics. We do not
+                sell your data to anyone.
               </p>
             </section>
 
@@ -81,7 +82,7 @@ export default function PrivacyPage() {
               </h2>
               <p className="mt-3">
                 You may request access to, correction of, or deletion of your personal data at
-                any time. Send your request via WhatsApp and we will respond promptly.
+                any time. Send your request via email and we will respond promptly.
               </p>
             </section>
 
@@ -100,8 +101,7 @@ export default function PrivacyPage() {
                 8. Contact Us
               </h2>
               <p className="mt-3">
-                For any privacy-related questions or requests, contact us via WhatsApp at
-                +44 7442 967254.
+                For any privacy-related questions or requests, contact us at {CONTACT_EMAIL}.
               </p>
             </section>
           </div>

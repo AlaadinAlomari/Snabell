@@ -2,30 +2,18 @@
 
 import { useState } from 'react';
 import { Check } from 'lucide-react';
-import { PACKAGES, type PackageId } from '@/lib/constants';
+import { PACKAGES } from '@/lib/constants';
+import { startCheckout } from '@/lib/checkout';
 import { useReveal } from '@/hooks/useReveal';
 
 function PricingCard({ pkg }: { pkg: (typeof PACKAGES)[number] }) {
   const { ref, className } = useReveal<HTMLDivElement>();
   const [loading, setLoading] = useState(false);
 
-  async function handleCheckout(tier: PackageId) {
+  async function handleCheckout() {
     setLoading(true);
-    try {
-      const res = await fetch('/api/checkout', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ tier }),
-      });
-      const data = await res.json();
-      if (data.url) {
-        window.location.href = data.url;
-      } else {
-        setLoading(false);
-      }
-    } catch {
-      setLoading(false);
-    }
+    const redirected = await startCheckout(pkg.id);
+    if (!redirected) setLoading(false);
   }
 
   return (
@@ -67,7 +55,7 @@ function PricingCard({ pkg }: { pkg: (typeof PACKAGES)[number] }) {
       <button
         type="button"
         disabled={loading}
-        onClick={() => handleCheckout(pkg.id)}
+        onClick={handleCheckout}
         className={`mt-8 w-full rounded-full px-6 py-3.5 text-sm font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-70 ${
           pkg.recommended
             ? 'bg-accent text-white hover:bg-accent-lt'

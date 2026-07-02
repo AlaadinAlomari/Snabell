@@ -1,10 +1,19 @@
 'use client';
 
-import { ArrowRight, MessageCircle } from 'lucide-react';
-import { WHATSAPP_LINK } from '@/lib/constants';
+import { useState } from 'react';
+import { ArrowRight } from 'lucide-react';
+import { startCheckout } from '@/lib/checkout';
 import BlobDecoration from './BlobDecoration';
 
 export default function Hero() {
+  const [loading, setLoading] = useState(false);
+
+  async function handleBuyNow() {
+    setLoading(true);
+    const redirected = await startCheckout('starter');
+    if (!redirected) setLoading(false);
+  }
+
   return (
     <section className="relative overflow-hidden px-[5vw] pb-20 pt-16 sm:pb-28 sm:pt-24">
       <BlobDecoration color="primary" className="-left-32 -top-32 h-72 w-72 sm:h-96 sm:w-96" />
@@ -32,15 +41,14 @@ export default function Hero() {
             See Pricing
             <ArrowRight size={16} />
           </a>
-          <a
-            href={WHATSAPP_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-line bg-bg px-7 py-3.5 text-sm font-semibold text-ink transition-colors hover:border-primary hover:text-primary sm:w-auto"
+          <button
+            type="button"
+            disabled={loading}
+            onClick={handleBuyNow}
+            className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-line bg-bg px-7 py-3.5 text-sm font-semibold text-ink transition-colors hover:border-primary hover:text-primary disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
           >
-            <MessageCircle size={16} />
-            Chat on WhatsApp
-          </a>
+            {loading ? 'Redirecting...' : 'Buy Now — $97'}
+          </button>
         </div>
 
         <div className="relative mx-auto mt-16 max-w-3xl">
