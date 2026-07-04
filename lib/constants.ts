@@ -18,167 +18,162 @@ export const PACKAGES: Package[] = [
     id: 'starter',
     name: 'Starter',
     price: 97,
-    tagline: 'A single, sharp landing page — fast.',
+    tagline: 'Everything you need to manage leads and bookings.',
     recommended: false,
     features: [
-      'One custom landing page',
-      'Mobile-responsive build',
-      'Basic copy review (1 round)',
-      'Contact/lead form',
-      'Delivered in 5 business days',
-      '7-day support window',
+      'CRM & Pipeline Management',
+      'Website Builder',
+      'Surveys & Forms',
+      'Email Marketing',
+      'Booking & Appointments',
+      'White-labeled under your brand',
     ],
-    ctaLabel: 'Get Starter',
+    ctaLabel: 'Start Starter',
   },
   {
     id: 'growth',
     name: 'Growth',
     price: 297,
-    tagline: 'Our most popular package — built to convert.',
+    tagline: 'Our most popular plan — built to scale your marketing.',
     recommended: true,
     features: [
       'Everything in Starter',
-      'Conversion-focused copywriting',
-      'Custom visual design (not a template)',
-      'SEO structure & metadata',
-      'Analytics + pixel setup',
-      '2 rounds of revisions',
-      'Delivered in 7 business days',
-      '30-day support window',
+      'Unlimited Sales Funnels',
+      '2-Way SMS Marketing',
+      'Workflow Automations',
+      'Tracking & Analytics',
     ],
-    ctaLabel: 'Get Growth',
+    ctaLabel: 'Start Growth',
   },
   {
     id: 'pro',
     name: 'Pro',
     price: 497,
-    tagline: 'For serious launches with zero compromises.',
+    tagline: 'The complete white-label growth stack — nothing held back.',
     recommended: false,
     features: [
       'Everything in Growth',
-      'A/B test variant page included',
-      'Advanced animations & interactions',
-      'Priority delivery (5 business days)',
-      '3 rounds of revisions',
-      'Speed optimisation (95+ PageSpeed)',
-      '60-day support window',
-      'Direct priority email support',
+      'Courses/Products',
+      'Call Tracking',
+      'Reputation Management',
+      'Communities',
+      'Document Signing',
     ],
-    ctaLabel: 'Get Pro',
+    ctaLabel: 'Start Pro',
   },
 ];
 
 export const FEATURES = [
   {
-    title: 'Fast Delivery',
-    description: 'Most projects ship in 5–7 business days, not months.',
+    title: 'All-in-One Platform',
+    description: 'Replace 10+ scattered tools with a single white-labeled dashboard.',
+    icon: 'Layers',
+  },
+  {
+    title: 'Fully White-Labeled',
+    description: 'Your brand, your domain — clients never see GoHighLevel underneath.',
+    icon: 'Palette',
+  },
+  {
+    title: 'Fast Onboarding',
+    description: 'Your workspace is provisioned and ready within 24 hours.',
     icon: 'Zap',
   },
   {
-    title: 'Conversion-Focused Copy',
-    description: 'Every word is written to move visitors toward action.',
-    icon: 'Target',
+    title: 'Cancel Anytime',
+    description: 'No long-term contracts — upgrade, downgrade, or cancel whenever.',
+    icon: 'RefreshCw',
   },
   {
-    title: 'Mobile-First',
-    description: 'Built and tested to look sharp on every screen size.',
-    icon: 'Smartphone',
-  },
-  {
-    title: 'SEO Ready',
-    description: 'Clean structure and metadata so search engines find you.',
-    icon: 'Search',
-  },
-  {
-    title: 'Analytics Built-in',
-    description: 'Track visitors and conversions from day one.',
-    icon: 'BarChart3',
-  },
-  {
-    title: 'Ongoing Support',
-    description: 'A real support window after delivery, not radio silence.',
+    title: 'Real Support',
+    description: 'Our team helps you configure funnels, automations, and more.',
     icon: 'LifeBuoy',
+  },
+  {
+    title: 'Continuous Updates',
+    description: 'New platform features roll out to your account automatically.',
+    icon: 'TrendingUp',
   },
 ];
 
 export const HOW_IT_WORKS = [
   {
     step: 1,
-    title: 'Choose Your Package',
-    description: 'Pick Starter, Growth, or Pro based on what your launch needs.',
+    title: 'Choose Your Plan',
+    description: 'Pick Starter, Growth, or Pro based on the tools your business needs.',
   },
   {
     step: 2,
-    title: 'Tell Us About Your Business',
-    description: 'Share your goals, brand, and content over email.',
+    title: 'Get Instant Access',
+    description: 'Your white-labeled workspace is provisioned within 24 hours.',
   },
   {
     step: 3,
-    title: 'We Design & Build',
-    description: 'Our team designs and develops your custom landing page.',
+    title: 'We Help You Set Up',
+    description: 'Our team helps configure your CRM, funnels, and automations.',
   },
   {
     step: 4,
-    title: 'You Launch',
-    description: 'Review, approve, and go live with a page built to convert.',
+    title: 'Grow On Autopilot',
+    description: 'Launch campaigns, book clients, and scale every month.',
   },
 ];
 
 export const TESTIMONIALS = [
   {
-    name: 'Maya Chen',
-    role: 'Founder, Loopwell',
+    name: 'Derek Lawson',
+    role: 'Owner, Lawson Digital Agency',
     quote:
-      'Snabell delivered our landing page in under a week and it converts better than the one our old agency built in a month.',
+      'Snabell let us launch our own branded software product in a week instead of building it ourselves.',
   },
   {
-    name: 'James Okafor',
-    role: 'Marketing Lead, Northbridge',
+    name: 'Priya Nair',
+    role: 'Founder, Nair Marketing Co.',
     quote:
-      'No back-and-forth nonsense — clear pricing, fast turnaround, and the design felt custom, not templated.',
+      'The CRM and funnels alone replaced four separate tools we were paying for every month.',
   },
   {
-    name: 'Sara Lindqvist',
-    role: 'Founder, Solace Studio',
+    name: 'Tomás Rivera',
+    role: 'Consultant, Rivera Growth Partners',
     quote:
-      'The checkout was seamless and their team was in my inbox within hours to kick things off.',
+      'Our clients think we built this platform ourselves — that\'s exactly the point.',
   },
 ];
 
 export const FAQS = [
   {
-    question: 'How fast will my landing page actually be delivered?',
+    question: 'What exactly am I getting with Snabell?',
     answer:
-      'Starter and Pro packages are delivered in 5 business days, and Growth in 7 business days, starting once you provide your content and business details over email.',
+      'A fully white-labeled version of the GoHighLevel platform — under your brand and domain — with the CRM, funnels, and marketing tools included in your plan.',
   },
   {
-    question: 'What do I need to provide to get started?',
+    question: 'Is this a monthly subscription?',
     answer:
-      'After checkout, we\'ll email you to gather your business details, brand assets, and any content you want included. The faster you respond, the faster we build.',
+      'Yes. All three plans bill monthly via Stripe. There are no long-term contracts — you can upgrade, downgrade, or cancel anytime.',
   },
   {
-    question: 'Do you offer revisions?',
+    question: 'Can I switch plans later?',
     answer:
-      'Yes. Starter includes 1 round, Growth includes 2 rounds, and Pro includes 3 rounds of revisions. Additional revisions can be purchased separately.',
+      'Yes — email us anytime and we\'ll move you to a new plan starting on your next billing cycle.',
   },
   {
-    question: 'How does payment work?',
+    question: 'What\'s the difference between the three plans?',
     answer:
-      'Payment is made securely through Stripe Checkout at the time of purchase. Full payment is required upfront before work begins.',
+      'Starter covers the essentials — CRM, website builder, forms, email, and booking. Growth adds unlimited funnels, SMS, automations, and analytics. Pro unlocks the full suite, including courses, call tracking, reputation management, communities, and document signing.',
   },
   {
-    question: 'Can I upgrade my package later?',
+    question: 'Is there a setup fee or free trial?',
     answer:
-      'Yes — email us and we\'ll work out the difference in price to move you up a tier.',
+      'No hidden setup fees. Your first payment activates your workspace, and our team onboards you within 24 hours.',
+  },
+  {
+    question: 'Can I cancel anytime?',
+    answer:
+      'Yes. Cancel anytime by emailing us — your plan stays active until the end of the current billing period, with no cancellation fees.',
   },
   {
     question: 'Do you offer refunds?',
     answer:
-      'If we fail to deliver within the agreed timeline (excluding delays caused by late client input), you\'re entitled to a full refund. See our Terms for details.',
-  },
-  {
-    question: 'How do I get in touch after purchasing?',
-    answer:
-      'We\'ll email you within a few hours of checkout to kick off your project, and you can reach us anytime at support@snabell.com.',
+      'Because your workspace is provisioned immediately, we don\'t offer refunds for partial billing periods, but you\'re never billed again after cancelling.',
   },
 ];

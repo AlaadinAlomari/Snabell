@@ -9,18 +9,18 @@ const config: Config = {
     extend: {
       colors: {
         bg: '#FFFFFF',
-        'bg-soft': '#F7F7F5',
-        ink: '#10201E',
-        'ink-soft': '#4B5D5A',
+        'bg-soft': '#F5F3FF',
+        ink: '#181433',
+        'ink-soft': '#635F7D',
         primary: {
-          DEFAULT: '#0F3D3E',
-          lt: '#155C5D',
+          DEFAULT: '#6D28D9',
+          lt: '#8B5CF6',
         },
         accent: {
-          DEFAULT: '#D46B4F',
-          lt: '#E88A6C',
+          DEFAULT: '#16A34A',
+          lt: '#22C55E',
         },
-        line: '#E5E3DD',
+        line: '#E7E3F5',
         'card-bg': '#FFFFFF',
       },
       fontFamily: {

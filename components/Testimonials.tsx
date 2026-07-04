@@ -32,7 +32,7 @@ export default function Testimonials() {
       <div className="mx-auto max-w-6xl">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="font-display text-3xl font-bold tracking-[-0.03em] text-ink sm:text-4xl">
-            Loved by founders and marketers
+            Loved by agencies and consultants
           </h2>
         </div>
 

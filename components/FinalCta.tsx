@@ -19,10 +19,10 @@ export default function FinalCta() {
 
       <div className="relative mx-auto max-w-2xl text-center">
         <h2 className="font-display text-3xl font-bold tracking-[-0.03em] text-ink sm:text-4xl">
-          Ready to launch a page that converts?
+          Ready to launch your own branded platform?
         </h2>
         <p className="mt-4 text-base text-ink-soft">
-          Pick your package and we&apos;ll have you live in as little as 5 days.
+          Pick a plan and get onboarded within 24 hours.
         </p>
 
         <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -30,7 +30,7 @@ export default function FinalCta() {
             href="/#pricing"
             className="inline-flex w-full items-center justify-center rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-primary-lt sm:w-auto"
           >
-            See Pricing
+            See Plans
           </a>
           <button
             type="button"
@@ -38,7 +38,7 @@ export default function FinalCta() {
             onClick={handleBuyNow}
             className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-line bg-bg px-7 py-3.5 text-sm font-semibold text-ink transition-colors hover:border-primary hover:text-primary disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
           >
-            {loading ? 'Redirecting...' : 'Get Growth — $297'}
+            {loading ? 'Redirecting...' : 'Start Growth — $297/mo'}
           </button>
         </div>
       </div>

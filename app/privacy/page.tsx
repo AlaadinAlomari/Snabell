@@ -27,10 +27,10 @@ export default function PrivacyPage() {
                 1. Information We Collect
               </h2>
               <p className="mt-3">
-                We collect your name and business details when you share them with us via
-                email. Payment data is processed directly by Stripe — Snabell does not store
-                your card details. We also collect analytics data through Google Analytics when
-                you visit our site.
+                We collect your name and business details when you share them with us via email,
+                along with usage data generated within your white-labeled workspace. Payment data
+                is processed directly by Stripe — Snabell does not store your card details. We
+                also collect analytics data through Google Analytics when you visit our site.
               </p>
             </section>
 
@@ -39,9 +39,9 @@ export default function PrivacyPage() {
                 2. How We Use Your Information
               </h2>
               <p className="mt-3">
-                We use the information you provide to scope and deliver your landing page
-                project, to process payment for your chosen package, and to communicate project
-                updates with you via email.
+                We use the information you provide to provision and maintain your white-labeled
+                workspace, to process recurring billing for your chosen plan, and to provide
+                onboarding and support via email.
               </p>
             </section>
 
@@ -51,8 +51,9 @@ export default function PrivacyPage() {
               </h2>
               <p className="mt-3">
                 We share data with the following third parties strictly to operate our service:
-                Stripe for payment processing and Google Analytics for site analytics. We do not
-                sell your data to anyone.
+                Stripe for payment processing, Google Analytics for site analytics, and the
+                underlying software infrastructure providers necessary to deliver your CRM and
+                marketing tools. We do not sell your data to anyone.
               </p>
             </section>
 
@@ -71,7 +72,8 @@ export default function PrivacyPage() {
                 5. Data Retention
               </h2>
               <p className="mt-3">
-                Project data is retained for 1 year following delivery. Payment records are
+                Workspace data is retained for the duration of your active subscription, plus 90
+                days after cancellation in case you choose to reactivate. Payment records are
                 retained for as long as required by applicable legal and tax requirements.
               </p>
             </section>

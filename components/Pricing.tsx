@@ -40,7 +40,7 @@ function PricingCard({ pkg }: { pkg: (typeof PACKAGES)[number] }) {
         <span className="font-display text-4xl font-bold tracking-[-0.03em] text-ink">
           ${pkg.price}
         </span>
-        <span className="text-sm text-ink-soft">one-time</span>
+        <span className="text-sm text-ink-soft">/month</span>
       </div>
 
       <ul className="mt-8 flex flex-1 flex-col gap-3">
@@ -74,10 +74,10 @@ export default function Pricing() {
       <div className="mx-auto max-w-6xl">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="font-display text-3xl font-bold tracking-[-0.03em] text-ink sm:text-4xl">
-            Simple, fixed pricing
+            Simple, transparent pricing
           </h2>
           <p className="mt-4 text-base text-ink-soft">
-            Three packages. No hourly rates, no surprise invoices.
+            Three plans, billed monthly. Upgrade, downgrade, or cancel anytime.
           </p>
         </div>
 

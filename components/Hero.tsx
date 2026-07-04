@@ -21,16 +21,16 @@ export default function Hero() {
 
       <div className="relative mx-auto max-w-4xl text-center">
         <span className="inline-flex items-center rounded-full border border-line bg-bg-soft px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-primary">
-          Landing pages, done fast
+          White-label software, done right
         </span>
 
         <h1 className="mt-6 font-display text-4xl font-bold leading-[1.1] tracking-[-0.03em] text-ink sm:text-5xl md:text-6xl">
-          Launch a landing page that actually converts — starting at $97.
+          Run your business on a fully white-labeled marketing platform — starting at $97/mo.
         </h1>
 
         <p className="mx-auto mt-6 max-w-2xl text-base text-ink-soft sm:text-lg">
-          Choose your package, tell us about your business, and get a custom-built landing page in
-          as little as 5 days. No agencies. No guesswork. No bloated retainers.
+          CRM, funnels, email, SMS, and more — all under your brand. Choose your plan, get
+          onboarded in 24 hours, and start selling like a software company.
         </p>
 
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -38,7 +38,7 @@ export default function Hero() {
             href="/#pricing"
             className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-primary-lt sm:w-auto"
           >
-            See Pricing
+            See Plans
             <ArrowRight size={16} />
           </a>
           <button
@@ -47,7 +47,7 @@ export default function Hero() {
             onClick={handleBuyNow}
             className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-line bg-bg px-7 py-3.5 text-sm font-semibold text-ink transition-colors hover:border-primary hover:text-primary disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
           >
-            {loading ? 'Redirecting...' : 'Buy Now — $97'}
+            {loading ? 'Redirecting...' : 'Start Starter — $97/mo'}
           </button>
         </div>
 

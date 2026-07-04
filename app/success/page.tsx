@@ -9,10 +9,11 @@ export default function SuccessPage() {
           <CheckCircle2 size={32} />
         </div>
         <h1 className="mt-6 font-display text-3xl font-bold tracking-[-0.03em] text-ink">
-          Payment received — thank you!
+          Subscription activated — welcome to Snabell!
         </h1>
         <p className="mt-4 text-base leading-relaxed text-ink-soft">
-          We&apos;ll email you at {CONTACT_EMAIL} within a few hours to kick off your project.
+          We&apos;ll email you at {CONTACT_EMAIL} within 24 hours to help you set up your
+          white-labeled workspace.
         </p>
         <a
           href={CONTACT_EMAIL_LINK}

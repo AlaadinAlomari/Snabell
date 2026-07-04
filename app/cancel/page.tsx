@@ -9,11 +9,11 @@ export default function CancelPage() {
           <XCircle size={32} />
         </div>
         <h1 className="mt-6 font-display text-3xl font-bold tracking-[-0.03em] text-ink">
-          Checkout cancelled — no charge was made.
+          Checkout cancelled — no subscription was started.
         </h1>
         <p className="mt-4 text-base leading-relaxed text-ink-soft">
-          You can pick a package again whenever you&apos;re ready, or email us if you have
-          questions first.
+          You can pick a plan again whenever you&apos;re ready, or email us if you have questions
+          first.
         </p>
         <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <a

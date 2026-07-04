@@ -1,16 +1,16 @@
 'use client';
 
-import { Zap, Target, Smartphone, Search, BarChart3, LifeBuoy, type LucideIcon } from 'lucide-react';
+import { Layers, Palette, Zap, RefreshCw, LifeBuoy, TrendingUp, type LucideIcon } from 'lucide-react';
 import { FEATURES } from '@/lib/constants';
 import { useReveal } from '@/hooks/useReveal';
 
 const ICONS: Record<string, LucideIcon> = {
+  Layers,
+  Palette,
   Zap,
-  Target,
-  Smartphone,
-  Search,
-  BarChart3,
+  RefreshCw,
   LifeBuoy,
+  TrendingUp,
 };
 
 function FeatureCard({ title, description, icon }: (typeof FEATURES)[number]) {
@@ -42,7 +42,7 @@ export default function Features() {
             Everything you need, nothing you don&apos;t
           </h2>
           <p className="mt-4 text-base text-ink-soft">
-            Every package is built around what actually moves the needle for a launch.
+            Every plan is built around what actually moves the needle for your business.
           </p>
         </div>
 

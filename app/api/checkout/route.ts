@@ -3,19 +3,19 @@ import { stripe } from '@/lib/stripe';
 
 const TIER_DETAILS: Record<string, { name: string; amount: number; description: string }> = {
   starter: {
-    name: 'Snabell — Starter Package',
+    name: 'Snabell — Starter Plan',
     amount: 9700,
-    description: 'A single, sharp landing page — fast.',
+    description: 'Everything you need to manage leads and bookings.',
   },
   growth: {
-    name: 'Snabell — Growth Package',
+    name: 'Snabell — Growth Plan',
     amount: 29700,
-    description: 'Our most popular package — built to convert.',
+    description: 'Our most popular plan — built to scale your marketing.',
   },
   pro: {
-    name: 'Snabell — Pro Package',
+    name: 'Snabell — Pro Plan',
     amount: 49700,
-    description: 'For serious launches with zero compromises.',
+    description: 'The complete white-label growth stack — nothing held back.',
   },
 };
 
@@ -25,14 +25,14 @@ export async function POST(req: NextRequest) {
     const tier = body?.tier;
 
     if (!tier || !(tier in TIER_DETAILS)) {
-      return NextResponse.json({ error: 'Invalid package tier.' }, { status: 400 });
+      return NextResponse.json({ error: 'Invalid plan tier.' }, { status: 400 });
     }
 
     const details = TIER_DETAILS[tier];
     const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
 
     const session = await stripe.checkout.sessions.create({
-      mode: 'payment',
+      mode: 'subscription',
       payment_method_types: ['card'],
       line_items: [
         {
@@ -43,6 +43,7 @@ export async function POST(req: NextRequest) {
               description: details.description,
             },
             unit_amount: details.amount,
+            recurring: { interval: 'month' },
           },
           quantity: 1,
         },

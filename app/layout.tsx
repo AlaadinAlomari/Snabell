@@ -17,13 +17,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Snabell — Landing Pages, Done Fast',
+  title: 'Snabell — White-Label Marketing Software',
   description:
-    'Launch a custom landing page starting at $97. Three simple packages, fast delivery, no bloated retainers.',
+    'Launch your own branded CRM, funnels, and marketing platform starting at $97/month. Three simple plans, real GoHighLevel power, your brand.',
   metadataBase: new URL('https://snabell.com'),
   openGraph: {
-    title: 'Snabell — Landing Pages, Done Fast',
-    description: 'Custom landing pages from $97. Fast, simple, no guesswork.',
+    title: 'Snabell — White-Label Marketing Software',
+    description: 'Your own branded CRM, funnels, and marketing platform from $97/month.',
     url: 'https://snabell.com',
     siteName: 'Snabell',
     images: [{ url: '/og.png', width: 1200, height: 630 }],
@@ -32,8 +32,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Snabell — Landing Pages, Done Fast',
-    description: 'Custom landing pages from $97.',
+    title: 'Snabell — White-Label Marketing Software',
+    description: 'Your own branded marketing platform from $97/month.',
     images: ['/og.png'],
   },
   robots: { index: true, follow: true },
