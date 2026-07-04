@@ -10,7 +10,7 @@ function TestimonialCard({ name, role, quote }: (typeof TESTIMONIALS)[number]) {
   return (
     <div
       ref={ref}
-      className={`flex flex-col rounded-2xl border border-line bg-card-bg p-6 shadow-sm ${className}`}
+      className={`flex w-[85vw] shrink-0 snap-center flex-col rounded-2xl border border-line bg-card-bg p-6 shadow-sm sm:w-[380px] ${className}`}
     >
       <div className="flex gap-1 text-accent">
         {Array.from({ length: 5 }).map((_, i) => (
@@ -28,19 +28,19 @@ function TestimonialCard({ name, role, quote }: (typeof TESTIMONIALS)[number]) {
 
 export default function Testimonials() {
   return (
-    <section className="bg-bg-soft px-[5vw] py-20 sm:py-28">
-      <div className="mx-auto max-w-6xl">
+    <section className="bg-bg-soft py-20 sm:py-28">
+      <div className="px-[5vw]">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="font-display text-3xl font-bold tracking-[-0.03em] text-ink sm:text-4xl">
             Loved by agencies and consultants
           </h2>
         </div>
+      </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {TESTIMONIALS.map((t) => (
-            <TestimonialCard key={t.name} {...t} />
-          ))}
-        </div>
+      <div className="mt-14 flex snap-x snap-mandatory gap-6 overflow-x-auto px-[5vw] pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        {TESTIMONIALS.map((t) => (
+          <TestimonialCard key={t.name} {...t} />
+        ))}
       </div>
     </section>
   );

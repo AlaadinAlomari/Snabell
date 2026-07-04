@@ -28,7 +28,7 @@ export default function PrivacyPage() {
               </h2>
               <p className="mt-3">
                 We collect your name and business details when you share them with us via email,
-                along with usage data generated within your white-labeled workspace. Payment data
+                along with usage data generated within your workspace. Payment data
                 is processed directly by Stripe — Snabell does not store your card details. We
                 also collect analytics data through Google Analytics when you visit our site.
               </p>
@@ -39,8 +39,8 @@ export default function PrivacyPage() {
                 2. How We Use Your Information
               </h2>
               <p className="mt-3">
-                We use the information you provide to provision and maintain your white-labeled
-                workspace, to process recurring billing for your chosen plan, and to provide
+                We use the information you provide to provision and maintain your workspace, to
+                process recurring billing for your chosen plan, and to provide
                 onboarding and support via email.
               </p>
             </section>

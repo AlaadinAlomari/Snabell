@@ -13,13 +13,13 @@ export default function Nav() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-line bg-bg/80 backdrop-blur">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-[5vw] py-4">
-        <a href="/" className="font-display text-xl font-bold tracking-tight text-ink">
+    <div className="sticky top-4 z-50 px-[5vw]">
+      <header className="mx-auto flex max-w-5xl items-center justify-between rounded-full border border-line bg-bg/90 px-5 py-3 shadow-sm backdrop-blur">
+        <a href="/" className="font-display text-lg font-bold tracking-tight text-ink">
           Snabell
         </a>
 
-        <div className="hidden items-center gap-8 md:flex">
+        <div className="hidden items-center gap-7 md:flex">
           {LINKS.map((link) => (
             <a
               key={link.href}
@@ -34,7 +34,7 @@ export default function Nav() {
         <div className="hidden items-center gap-4 md:flex">
           <a
             href="/#pricing"
-            className="rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-primary-lt"
+            className="rounded-full bg-primary px-5 py-2 text-sm font-semibold text-white transition-colors hover:bg-primary-lt"
           >
             Get Started
           </a>
@@ -48,10 +48,10 @@ export default function Nav() {
         >
           {open ? <X size={22} /> : <Menu size={22} />}
         </button>
-      </nav>
+      </header>
 
       {open && (
-        <div className="border-t border-line bg-bg px-[5vw] py-4 md:hidden">
+        <div className="mx-auto mt-2 max-w-5xl rounded-3xl border border-line bg-bg px-5 py-4 shadow-sm md:hidden">
           <div className="flex flex-col gap-4">
             {LINKS.map((link) => (
               <a
@@ -73,6 +73,6 @@ export default function Nav() {
           </div>
         </div>
       )}
-    </header>
+    </div>
   );
 }

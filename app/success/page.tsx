@@ -13,7 +13,7 @@ export default function SuccessPage() {
         </h1>
         <p className="mt-4 text-base leading-relaxed text-ink-soft">
           We&apos;ll email you at {CONTACT_EMAIL} within 24 hours to help you set up your
-          white-labeled workspace.
+          workspace.
         </p>
         <a
           href={CONTACT_EMAIL_LINK}

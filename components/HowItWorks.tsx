@@ -3,18 +3,28 @@
 import { HOW_IT_WORKS } from '@/lib/constants';
 import { useReveal } from '@/hooks/useReveal';
 
-function Step({ step, title, description }: (typeof HOW_IT_WORKS)[number]) {
+function Step({
+  step,
+  title,
+  description,
+  isLast,
+}: (typeof HOW_IT_WORKS)[number] & { isLast: boolean }) {
   const { ref, className } = useReveal<HTMLDivElement>();
 
   return (
-    <div ref={ref} className={`flex flex-1 flex-col items-center text-center ${className}`}>
-      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary font-display text-lg font-bold text-white">
-        {step}
+    <div ref={ref} className={`flex gap-6 pb-10 last:pb-0 ${className}`}>
+      <div className="flex flex-col items-center">
+        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary font-display text-lg font-bold text-white">
+          {step}
+        </div>
+        {!isLast && <div className="mt-2 w-px flex-1 bg-line" />}
       </div>
-      <h3 className="mt-4 font-display text-lg font-semibold tracking-[-0.02em] text-ink">
-        {title}
-      </h3>
-      <p className="mt-2 max-w-xs text-sm leading-relaxed text-ink-soft">{description}</p>
+      <div className="pt-1.5">
+        <h3 className="font-display text-lg font-semibold tracking-[-0.02em] text-ink">
+          {title}
+        </h3>
+        <p className="mt-2 max-w-md text-sm leading-relaxed text-ink-soft">{description}</p>
+      </div>
     </div>
   );
 }
@@ -32,9 +42,9 @@ export default function HowItWorks() {
           </p>
         </div>
 
-        <div className="mt-14 flex flex-col gap-10 sm:flex-row sm:gap-6">
-          {HOW_IT_WORKS.map((item) => (
-            <Step key={item.step} {...item} />
+        <div className="mx-auto mt-14 max-w-xl">
+          {HOW_IT_WORKS.map((item, i) => (
+            <Step key={item.step} {...item} isLast={i === HOW_IT_WORKS.length - 1} />
           ))}
         </div>
       </div>

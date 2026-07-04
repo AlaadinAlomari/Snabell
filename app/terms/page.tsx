@@ -28,8 +28,8 @@ export default function TermsPage() {
                 1. Services Provided
               </h2>
               <p className="mt-3">
-                Snabell provides access to a white-labeled version of a third-party marketing and
-                CRM platform. The specific tools included are defined by the plan you select at
+                Snabell provides access to a cloud-based marketing and CRM platform under the
+                Snabell brand. The specific tools included are defined by the plan you select at
                 checkout — see the Pricing section of our site for the exact inclusions of each
                 plan.
               </p>
@@ -52,7 +52,7 @@ export default function TermsPage() {
               </h2>
               <p className="mt-3">
                 After your first payment, our team will email you within 24 hours to provision
-                your white-labeled workspace and help you get set up.
+                your workspace and help you get set up.
               </p>
             </section>
 

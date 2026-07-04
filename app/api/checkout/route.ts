@@ -15,7 +15,7 @@ const TIER_DETAILS: Record<string, { name: string; amount: number; description: 
   pro: {
     name: 'Snabell — Pro Plan',
     amount: 49700,
-    description: 'The complete white-label growth stack — nothing held back.',
+    description: 'The complete growth stack — nothing held back.',
   },
 };
 

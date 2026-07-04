@@ -1,6 +1,6 @@
 import Nav from '@/components/Nav';
 import Hero from '@/components/Hero';
-import LogoStrip from '@/components/LogoStrip';
+import Stats from '@/components/Stats';
 import Features from '@/components/Features';
 import HowItWorks from '@/components/HowItWorks';
 import Pricing from '@/components/Pricing';
@@ -15,7 +15,7 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
-        <LogoStrip />
+        <Stats />
         <Features />
         <HowItWorks />
         <Pricing />

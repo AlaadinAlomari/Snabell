@@ -3,13 +3,55 @@ export const CONTACT_EMAIL_LINK = `mailto:${CONTACT_EMAIL}`;
 
 export type PackageId = 'starter' | 'growth' | 'pro';
 
+export const ALL_FEATURES = [
+  'CRM & Pipeline Management',
+  'Unlimited Sales Funnels',
+  'Website Builder',
+  'Surveys & Forms',
+  'Email Marketing',
+  '2-Way SMS Marketing',
+  'Booking & Appointments',
+  'Workflow Automations',
+  'Courses/Products',
+  'Call Tracking',
+  'Reputation Management',
+  'Tracking & Analytics',
+  'Communities',
+  'Document Signing',
+] as const;
+
+const STARTER_FEATURES = [
+  'CRM & Pipeline Management',
+  'Website Builder',
+  'Surveys & Forms',
+  'Email Marketing',
+  'Booking & Appointments',
+];
+
+const GROWTH_FEATURES = [
+  ...STARTER_FEATURES,
+  'Unlimited Sales Funnels',
+  '2-Way SMS Marketing',
+  'Workflow Automations',
+  'Tracking & Analytics',
+];
+
+const PRO_FEATURES = [
+  ...GROWTH_FEATURES,
+  'Courses/Products',
+  'Call Tracking',
+  'Reputation Management',
+  'Communities',
+  'Document Signing',
+];
+
 export interface Package {
   id: PackageId;
   name: string;
   price: number;
   tagline: string;
   recommended: boolean;
-  features: string[];
+  includedFeatures: string[];
   ctaLabel: string;
 }
 
@@ -20,14 +62,7 @@ export const PACKAGES: Package[] = [
     price: 97,
     tagline: 'Everything you need to manage leads and bookings.',
     recommended: false,
-    features: [
-      'CRM & Pipeline Management',
-      'Website Builder',
-      'Surveys & Forms',
-      'Email Marketing',
-      'Booking & Appointments',
-      'White-labeled under your brand',
-    ],
+    includedFeatures: STARTER_FEATURES,
     ctaLabel: 'Start Starter',
   },
   {
@@ -36,63 +71,63 @@ export const PACKAGES: Package[] = [
     price: 297,
     tagline: 'Our most popular plan — built to scale your marketing.',
     recommended: true,
-    features: [
-      'Everything in Starter',
-      'Unlimited Sales Funnels',
-      '2-Way SMS Marketing',
-      'Workflow Automations',
-      'Tracking & Analytics',
-    ],
+    includedFeatures: GROWTH_FEATURES,
     ctaLabel: 'Start Growth',
   },
   {
     id: 'pro',
     name: 'Pro',
     price: 497,
-    tagline: 'The complete white-label growth stack — nothing held back.',
+    tagline: 'The complete growth stack — nothing held back.',
     recommended: false,
-    features: [
-      'Everything in Growth',
-      'Courses/Products',
-      'Call Tracking',
-      'Reputation Management',
-      'Communities',
-      'Document Signing',
-    ],
+    includedFeatures: PRO_FEATURES,
     ctaLabel: 'Start Pro',
   },
+];
+
+export const STATS = [
+  { value: '14', label: 'Built-in tools' },
+  { value: '24hr', label: 'Onboarding time' },
+  { value: '500+', label: 'Businesses powered' },
+  { value: '$0', label: 'Setup fees' },
 ];
 
 export const FEATURES = [
   {
     title: 'All-in-One Platform',
-    description: 'Replace 10+ scattered tools with a single white-labeled dashboard.',
+    description: 'Replace 10+ scattered tools with a single dashboard built for growth.',
     icon: 'Layers',
+    size: 'lg',
   },
   {
-    title: 'Fully White-Labeled',
-    description: 'Your brand, your domain — clients never see GoHighLevel underneath.',
+    title: 'Your Brand, Your Domain',
+    description: 'Everything runs under your business name — no other platform branding, ever.',
     icon: 'Palette',
+    size: 'sm',
   },
   {
     title: 'Fast Onboarding',
     description: 'Your workspace is provisioned and ready within 24 hours.',
     icon: 'Zap',
+    size: 'sm',
   },
   {
     title: 'Cancel Anytime',
     description: 'No long-term contracts — upgrade, downgrade, or cancel whenever.',
     icon: 'RefreshCw',
+    size: 'sm',
   },
   {
     title: 'Real Support',
     description: 'Our team helps you configure funnels, automations, and more.',
     icon: 'LifeBuoy',
+    size: 'sm',
   },
   {
     title: 'Continuous Updates',
     description: 'New platform features roll out to your account automatically.',
     icon: 'TrendingUp',
+    size: 'sm',
   },
 ];
 
@@ -105,7 +140,7 @@ export const HOW_IT_WORKS = [
   {
     step: 2,
     title: 'Get Instant Access',
-    description: 'Your white-labeled workspace is provisioned within 24 hours.',
+    description: 'Your workspace is provisioned within 24 hours.',
   },
   {
     step: 3,
@@ -144,7 +179,7 @@ export const FAQS = [
   {
     question: 'What exactly am I getting with Snabell?',
     answer:
-      'A fully white-labeled version of the GoHighLevel platform — under your brand and domain — with the CRM, funnels, and marketing tools included in your plan.',
+      'A complete business platform under your own brand — with the CRM, funnels, and marketing tools included in your plan.',
   },
   {
     question: 'Is this a monthly subscription?',

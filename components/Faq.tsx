@@ -47,14 +47,14 @@ export default function Faq() {
 
   return (
     <section id="faq" className="px-[5vw] py-20 sm:py-28">
-      <div className="mx-auto max-w-3xl">
+      <div className="mx-auto max-w-5xl">
         <div className="text-center">
           <h2 className="font-display text-3xl font-bold tracking-[-0.03em] text-ink sm:text-4xl">
             Frequently asked questions
           </h2>
         </div>
 
-        <div className="mt-12 flex flex-col gap-4">
+        <div className="mt-12 grid grid-cols-1 gap-4 lg:grid-cols-2">
           {FAQS.map((faq, i) => (
             <FaqItem
               key={faq.question}

@@ -17,13 +17,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Snabell — White-Label Marketing Software',
+  title: 'Snabell — Your All-in-One Business Platform',
   description:
-    'Launch your own branded CRM, funnels, and marketing platform starting at $97/month. Three simple plans, real GoHighLevel power, your brand.',
+    'Run your CRM, funnels, and marketing from one platform under your own brand, starting at $97/month.',
   metadataBase: new URL('https://snabell.com'),
   openGraph: {
-    title: 'Snabell — White-Label Marketing Software',
-    description: 'Your own branded CRM, funnels, and marketing platform from $97/month.',
+    title: 'Snabell — Your All-in-One Business Platform',
+    description: 'Your CRM, funnels, and marketing platform from $97/month.',
     url: 'https://snabell.com',
     siteName: 'Snabell',
     images: [{ url: '/og.png', width: 1200, height: 630 }],
@@ -32,8 +32,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Snabell — White-Label Marketing Software',
-    description: 'Your own branded marketing platform from $97/month.',
+    title: 'Snabell — Your All-in-One Business Platform',
+    description: 'Your business platform from $97/month.',
     images: ['/og.png'],
   },
   robots: { index: true, follow: true },
