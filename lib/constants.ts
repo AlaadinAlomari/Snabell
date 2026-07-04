@@ -9,7 +9,6 @@ export const ALL_FEATURES = [
   'Website Builder',
   'Surveys & Forms',
   'Email Marketing',
-  '2-Way SMS Marketing',
   'Booking & Appointments',
   'Workflow Automations',
   'Courses/Products',
@@ -31,7 +30,6 @@ const STARTER_FEATURES = [
 const GROWTH_FEATURES = [
   ...STARTER_FEATURES,
   'Unlimited Sales Funnels',
-  '2-Way SMS Marketing',
   'Workflow Automations',
   'Tracking & Analytics',
 ];
@@ -173,7 +171,7 @@ export const FAQS = [
   {
     question: 'What\'s the difference between the three plans?',
     answer:
-      'Starter covers the essentials — CRM, website builder, forms, email, and booking. Growth adds unlimited funnels, SMS, automations, and analytics. Pro unlocks the full suite, including courses, call tracking, reputation management, communities, and document signing.',
+      'Starter covers the essentials — CRM, website builder, forms, email, and booking. Growth adds unlimited funnels, automations, and analytics. Pro unlocks the full suite, including courses, call tracking, reputation management, communities, and document signing.',
   },
   {
     question: 'Is there a setup fee or free trial?',

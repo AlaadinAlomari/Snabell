@@ -30,7 +30,7 @@ export default function Hero() {
           </h1>
 
           <p className="mx-auto mt-6 max-w-xl text-base text-ink-soft sm:text-lg lg:mx-0">
-            CRM, funnels, email, SMS, and more — all under your brand. Choose your plan, get
+            CRM, funnels, email, and more — all under your brand. Choose your plan, get
             onboarded in 24 hours, and start running your business like a software company.
           </p>
 
