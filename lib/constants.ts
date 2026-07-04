@@ -1,5 +1,7 @@
 export const CONTACT_EMAIL = 'support@snabell.com';
 export const CONTACT_EMAIL_LINK = `mailto:${CONTACT_EMAIL}`;
+export const CONTACT_PHONE = '(307) 401-8476';
+export const CONTACT_PHONE_LINK = 'tel:+13074018476';
 
 export type PackageId = 'starter' | 'growth' | 'pro';
 

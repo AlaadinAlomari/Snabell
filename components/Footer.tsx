@@ -1,4 +1,4 @@
-import { CONTACT_EMAIL_LINK } from '@/lib/constants';
+import { CONTACT_EMAIL_LINK, CONTACT_PHONE, CONTACT_PHONE_LINK } from '@/lib/constants';
 
 export default function Footer() {
   return (
@@ -11,6 +11,9 @@ export default function Footer() {
         <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs sm:justify-end">
           <a href={CONTACT_EMAIL_LINK} className="text-ink-soft transition-colors hover:text-primary">
             Email Support
+          </a>
+          <a href={CONTACT_PHONE_LINK} className="text-ink-soft transition-colors hover:text-primary">
+            {CONTACT_PHONE}
           </a>
           <a href="/#pricing" className="text-ink-soft transition-colors hover:text-primary">
             Pricing
