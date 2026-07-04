@@ -18,7 +18,7 @@ export default function TermsPage() {
             Terms of Service
           </h1>
           <p className="mt-4 text-sm text-ink-soft">
-            Snabell LLC · White-label access to marketing and CRM software, offered as a monthly
+            Snabell LLC · Access to a business and marketing platform, offered as a monthly
             subscription in three plans (Starter $97 / Growth $297 / Pro $497).
           </p>
 
@@ -112,11 +112,14 @@ export default function TermsPage() {
 
             <section>
               <h2 className="font-display text-xl font-semibold tracking-[-0.02em] text-ink">
-                9. Refund Policy
+                9. Refunds &amp; Disputes
               </h2>
               <p className="mt-3">
                 Because your workspace is provisioned immediately upon payment, we do not offer
-                refunds for partial billing periods. Cancelling stops all future charges.
+                refunds for partial billing periods. Cancelling stops all future charges. If you
+                believe you were billed in error, contact us at {CONTACT_EMAIL} before filing a
+                dispute or chargeback with your bank — we respond to all billing inquiries within
+                2 business days and will issue a correction if a billing error is confirmed.
               </p>
             </section>
 
