@@ -154,27 +154,6 @@ export const HOW_IT_WORKS = [
   },
 ];
 
-export const TESTIMONIALS = [
-  {
-    name: 'Derek Lawson',
-    role: 'Owner, Lawson Digital Agency',
-    quote:
-      'Snabell let us launch our own branded software product in a week instead of building it ourselves.',
-  },
-  {
-    name: 'Priya Nair',
-    role: 'Founder, Nair Marketing Co.',
-    quote:
-      'The CRM and funnels alone replaced four separate tools we were paying for every month.',
-  },
-  {
-    name: 'Tomás Rivera',
-    role: 'Consultant, Rivera Growth Partners',
-    quote:
-      'Our clients think we built this platform ourselves — that\'s exactly the point.',
-  },
-];
-
 export const FAQS = [
   {
     question: 'What exactly am I getting with Snabell?',
