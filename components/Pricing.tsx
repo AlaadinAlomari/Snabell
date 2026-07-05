@@ -2,38 +2,50 @@
 
 import { Fragment, useState } from 'react';
 import { Check, Minus } from 'lucide-react';
-import { ALL_FEATURES, PACKAGES, type PackageId } from '@/lib/constants';
+import { ALL_FEATURES, CONTACT_EMAIL, PACKAGES, type PackageId } from '@/lib/constants';
 import { startCheckout } from '@/lib/checkout';
 import { useReveal } from '@/hooks/useReveal';
 
 function useTierCheckout(tier: PackageId) {
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
   async function handleCheckout() {
     setLoading(true);
+    setError(false);
     const redirected = await startCheckout(tier);
-    if (!redirected) setLoading(false);
+    if (!redirected) {
+      setLoading(false);
+      setError(true);
+    }
   }
 
-  return { loading, handleCheckout };
+  return { loading, error, handleCheckout };
 }
 
 function PlanButton({ pkg }: { pkg: (typeof PACKAGES)[number] }) {
-  const { loading, handleCheckout } = useTierCheckout(pkg.id);
+  const { loading, error, handleCheckout } = useTierCheckout(pkg.id);
 
   return (
-    <button
-      type="button"
-      disabled={loading}
-      onClick={handleCheckout}
-      className={`w-full rounded-full px-6 py-3 text-sm font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-70 ${
-        pkg.recommended
-          ? 'bg-accent text-white hover:bg-accent-lt'
-          : 'bg-primary text-white hover:bg-primary-lt'
-      }`}
-    >
-      {loading ? 'Redirecting...' : pkg.ctaLabel}
-    </button>
+    <div>
+      <button
+        type="button"
+        disabled={loading}
+        onClick={handleCheckout}
+        className={`w-full rounded-full px-6 py-3 text-sm font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-70 ${
+          pkg.recommended
+            ? 'bg-accent text-white hover:bg-accent-lt'
+            : 'bg-primary text-white hover:bg-primary-lt'
+        }`}
+      >
+        {loading ? 'Redirecting...' : pkg.ctaLabel}
+      </button>
+      {error && (
+        <p className="mt-2 text-xs text-accent">
+          Something went wrong. Please try again or email {CONTACT_EMAIL}.
+        </p>
+      )}
+    </div>
   );
 }
 

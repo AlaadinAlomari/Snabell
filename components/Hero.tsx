@@ -7,11 +7,16 @@ import BlobDecoration from './BlobDecoration';
 
 export default function Hero() {
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
   async function handleBuyNow() {
     setLoading(true);
+    setError(false);
     const redirected = await startCheckout('starter');
-    if (!redirected) setLoading(false);
+    if (!redirected) {
+      setLoading(false);
+      setError(true);
+    }
   }
 
   return (
@@ -51,6 +56,11 @@ export default function Hero() {
               {loading ? 'Redirecting...' : 'Start Starter — $97/mo'}
             </button>
           </div>
+          {error && (
+            <p className="mt-3 text-xs text-accent">
+              Something went wrong. Please try again.
+            </p>
+          )}
         </div>
 
         <div className="relative mx-auto w-full max-w-lg">

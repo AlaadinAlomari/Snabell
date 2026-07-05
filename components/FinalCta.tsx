@@ -5,11 +5,16 @@ import { startCheckout } from '@/lib/checkout';
 
 export default function FinalCta() {
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
   async function handleBuyNow() {
     setLoading(true);
+    setError(false);
     const redirected = await startCheckout('growth');
-    if (!redirected) setLoading(false);
+    if (!redirected) {
+      setLoading(false);
+      setError(true);
+    }
   }
 
   return (
@@ -48,6 +53,11 @@ export default function FinalCta() {
               {loading ? 'Redirecting...' : 'Start Growth — $297/mo'}
             </button>
           </div>
+          {error && (
+            <p className="mt-3 text-xs text-white/80">
+              Something went wrong. Please try again.
+            </p>
+          )}
         </div>
       </div>
     </section>
